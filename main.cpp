@@ -15,8 +15,14 @@ int main() {
     int edades[] = { 24, 40, 19, 32 };
     std::cout << sizeof(edades) / sizeof(edades[0]) << std::endl;
 
+    /*
+
+        Prueba de comentario en bloque
+
+    */
     std::cout << "¿Cuál es tu edad?" << std::endl;
 
+    // Prueba de comentario en línea
     int edad_usuario = 0;
     std::cin >> edad_usuario;
     std::cout << "Tu edad es: " << edad_usuario << std::endl;
