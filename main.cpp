@@ -11,4 +11,7 @@ int main() {
     std::cout << lista_edades[2] << std::endl;
     std::cout << edad << std::endl;
     std::cout << letra << std::endl;
+
+    int edades[] = { 24, 40, 19, 32 };
+    std::cout << sizeof(edades) / sizeof(edades[0]) << std::endl;
 } 
