@@ -50,4 +50,20 @@ int main() {
     } else {
         std::cout << "Puedes votar" << std::endl;
     }
+
+    int option = 0;
+    std::cout << "Introduce una opción: ";
+    std::cin >> option;
+    switch (option)
+    {
+    case 1:
+        std::cout << "Opción 1" << std::endl;
+        break;
+    case 2:
+        std::cout << "Opción 2" << std::endl;
+        break;
+    default:
+        std::cout << "Opción no soportada" << std::endl;
+        break;
+    }
 } 
