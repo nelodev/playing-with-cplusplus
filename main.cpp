@@ -1,5 +1,9 @@
 #include <iostream>
 
+int multiplicar(int a, int b = 2) {
+    return a * b;
+}
+
 int main() {
     int edad = 25;
     edad = 18;
@@ -94,5 +98,6 @@ int main() {
             break;
         }
     } while (true);
-    
-} 
+
+    std::cout << multiplicar(200) << std::endl;
+}
