@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 
 int multiplicar(int a, int b = 2) {
     return a * b;
@@ -100,4 +101,7 @@ int main() {
     } while (true);
 
     std::cout << multiplicar(200) << std::endl;
+
+    std::string texto = "texto con string";
+    std::cout << texto << std::endl;
 }
