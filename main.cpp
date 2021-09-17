@@ -76,7 +76,7 @@ int main() {
     }
 
     while(true) {
-        char respuesta = 'a';
+        char respuesta;
         std::cout << "¿Deseas terminar?" << std::endl;
         std::cin >> respuesta;
         if (respuesta == 'y') {
@@ -84,5 +84,15 @@ int main() {
             break;
         }
     }
+
+    do {
+        char respuesta;
+        std::cout << "¿Deseas terminar?" << std::endl;
+        std::cin >> respuesta;
+        if (respuesta == 'y') {
+            std::cout << "Bye bye" << std::endl;
+            break;
+        }
+    } while (true);
     
 } 
