@@ -74,5 +74,15 @@ int main() {
         std::cout << i << std::endl;
         if (lista[i] == 200) break;
     }
+
+    while(true) {
+        char respuesta = 'a';
+        std::cout << "¿Deseas terminar?" << std::endl;
+        std::cin >> respuesta;
+        if (respuesta == 'y') {
+            std::cout << "Bye bye" << std::endl;
+            break;
+        }
+    }
     
 } 
