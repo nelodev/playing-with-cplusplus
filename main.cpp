@@ -26,4 +26,28 @@ int main() {
     int edad_usuario = 0;
     std::cin >> edad_usuario;
     std::cout << "Tu edad es: " << edad_usuario << std::endl;
+
+    /*
+
+        1 -> Verdadero
+        0 -> Falso
+
+    */
+    bool resultado = true && false;
+    std::cout << resultado << std::endl; // 0
+
+    bool resultado2 = true || false;
+    std::cout << resultado2 << std::endl; // 1
+
+    bool resultado3 = !true;
+    std::cout << resultado3 << std::endl; // 0
+
+    int new_age = 25;
+    std::cout << "Edad: ";
+    std::cin >> new_age;
+    if (new_age < 18 || new_age > 40) {
+        std::cout << "No puedes votar" << std::endl;
+    } else {
+        std::cout << "Puedes votar" << std::endl;
+    }
 } 
