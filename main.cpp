@@ -104,4 +104,7 @@ int main() {
 
     std::string texto = "texto con string";
     std::cout << texto << std::endl;
+    std::cout << "Texto.size() = " << texto.size() << std::endl;
+    std::cout << "stoi('10') = " << std::stoi("10") << std::endl;
+    std::cout << "stoi('10.5') = " << std::stof("10.5") << std::endl;
 }
