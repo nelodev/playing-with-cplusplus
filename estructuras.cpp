@@ -54,4 +54,21 @@ int main() {
   p2->edad = 26;
   cout << p2->nombre << endl;
   cout << p2->edad << endl;
+
+  union numero_letra {
+    int numero;
+    char letra;
+  };
+
+  numero_letra x = { 'A' };
+  cout << "x como numero: " << (char) x.numero << endl;
+  cout << "x como letra: " << (int) x.letra << endl;
+
+  enum dias_semana {
+    lunes = 'L', martes = 'M', miercoles = 'X'
+  };
+
+  dias_semana dia = martes;
+
+  cout << (char) dia << endl;
 }
