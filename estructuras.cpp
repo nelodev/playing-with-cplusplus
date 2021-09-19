@@ -7,8 +7,18 @@ using std::endl;
 
 class Person {
   public:
-    string nombre = "Nelo";
-    int edad = 25;
+    string nombre;
+    int edad;
+
+    Person(string n, int e) {
+      nombre = n;
+      edad = e;
+    };
+
+    ~Person() {
+      cout << "Destructor" << endl;
+    }
+
     void saludar() {
       cout << nombre << endl;
     };
@@ -82,10 +92,13 @@ int main() {
   cout << (char) dia << endl;
 
   // Memoria utilizada en tiempo de compilación
-  Person p3 = Person();
+  Person p3 = Person("Nelo", 28);
   p3.saludar();
 
   // Memoria utilizada en tiempo de ejecución
-  Person *p4 = new Person();
+  Person *p4 = new Person("Manuel", 28);
+
+  // delete p4;
+
   p4->saludar();
 }
