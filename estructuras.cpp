@@ -10,14 +10,27 @@ class Person {
     string nombre;
     int edad;
   public:
-    Person(string n, int e) : nombre(n), edad(e) {};
+    Person(string nombre, int edad) {
+      this->nombre = nombre;
+      this->edad = edad;
+    };
 
     ~Person() {
       cout << "Destructor" << endl;
     }
 
+    Person &setNombre(string nombre) {
+      this->nombre = nombre;
+      return *this;
+    }
+
+    Person &setEdad(int edad) {
+      this->edad = edad;
+      return *this;
+    }
+
     void saludar() {
-      cout << nombre << endl;
+      cout << "Hola, soy " << nombre << " y tengo " << edad << " años" << endl;
     };
 };
 
@@ -92,10 +105,18 @@ int main() {
   Person p3 = Person("Nelo", 28);
   p3.saludar();
 
+  p3.setNombre("Emanuel").setEdad(49);
+
+  p3.saludar();
+
   // Memoria utilizada en tiempo de ejecución
   Person *p4 = new Person("Manuel", 28);
 
   // delete p4;
+
+  p4->saludar();
+
+  p4->setEdad(30).setNombre("Luis");
 
   p4->saludar();
 }
