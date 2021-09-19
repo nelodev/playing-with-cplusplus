@@ -7,13 +7,11 @@ using std::endl;
 
 class Person {
   private:
+    static int numero_personas;
     string nombre;
     int edad;
   public:
-    Person(string nombre, int edad) {
-      this->nombre = nombre;
-      this->edad = edad;
-    };
+    Person(string nombre, int edad);
 
     ~Person() {
       cout << "Destructor" << endl;
@@ -29,9 +27,19 @@ class Person {
       return *this;
     }
 
-    void saludar() {
-      cout << "Hola, soy " << nombre << " y tengo " << edad << " años" << endl;
-    };
+    void saludar();
+};
+
+int Person::numero_personas = 0;
+
+void Person::saludar() {
+  cout << "Hola, soy " << nombre << ". Hay " << numero_personas << "personas y tengo " << edad << " años" << endl;
+}
+
+Person::Person(string nombre, int edad) {
+  this->nombre = nombre;
+  this->edad = edad;
+  numero_personas += 1;
 };
 
 struct Persona {
