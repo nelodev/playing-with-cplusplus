@@ -6,14 +6,11 @@ using std::cout;
 using std::endl;
 
 class Person {
-  public:
+  private:
     string nombre;
     int edad;
-
-    Person(string n, int e) {
-      nombre = n;
-      edad = e;
-    };
+  public:
+    Person(string n, int e) : nombre(n), edad(e) {};
 
     ~Person() {
       cout << "Destructor" << endl;
