@@ -5,6 +5,15 @@ using std::string;
 using std::cout;
 using std::endl;
 
+class Person {
+  public:
+    string nombre = "Nelo";
+    int edad = 25;
+    void saludar() {
+      cout << nombre << endl;
+    };
+};
+
 struct Persona {
   string nombre;
   int edad;
@@ -71,4 +80,12 @@ int main() {
   dias_semana dia = martes;
 
   cout << (char) dia << endl;
+
+  // Memoria utilizada en tiempo de compilación
+  Person p3 = Person();
+  p3.saludar();
+
+  // Memoria utilizada en tiempo de ejecución
+  Person *p4 = new Person();
+  p4->saludar();
 }
